@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pixel Character Viewer</title>
+    <link rel="stylesheet" href="style.css" />
+    <audio id="bg-music" src="music/backtrack.mp3" autoplay loop></audio>
+    <audio id="click-sound" src="sounds/click.mp3" preload="auto"></audio>
+</head>
+<body>
+    <button class="music_button" onclick="startMusic()">🎵 Start Music</button>
+    <div class="viewer">
+        <button id="prev" class="butt" onclick=playClickSound()>&#8592;</button>
+
+        <div class="card">
+            <img id="char-img" src="images/marvin.png" alt="Character" />
+            <h2 id="char-name">Hero</h2>
+            <p>Level: <span id="char-level">1</span></p>
+            <div class="xp-bar">
+                <div id="char-xp" class="fill" style="width: 40%"></div>
+            </div>
+        </div>
+        <a href="shop.html" class="floating-shop-icon" onclick=playClickSound()>
+            <img src="images/Shop.png" alt="Shop" />
+        </a>          
+
+        <button id="next" class="butt" onclick=playClickSound()>&#8594;</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

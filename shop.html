@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shop</title>
+  <link rel="stylesheet" href="style.css" />
+  <audio id="click-sound" src="sounds/click.mp3" preload="auto"></audio>
+</head>
+<body>
+  <div class="shop-header">
+    <h1>✨ In-Game Shop</h1>
+  </div>
+
+  <!-- Tabs -->
+    <!-- Right-aligned nav -->
+    <div class="top-right-menu">
+        <img src="images/Shop.png" alt="Shop Icon" class="shop-icon" />
+        <div class="shop-tabs">
+            <button class="tab-button active" data-tab="topup" onclick=playClickSound()>Top-Up</button>
+            <button class="tab-button" data-tab="gacha" onclick=playClickSound()>Gacha</button>
+            <button class="tab-button" data-tab="items" onclick=playClickSound()>Items</button>
+        </div>
+    </div>
+</div>
+
+<div class="button-wrapper">
+<a href='index.html' class="back-button" onclick=playClickSound()>🔙 Back</a>
+</div>
+
+  <!-- Tab content areas -->
+  <div id="topup" class="tab-content active">
+    <h2>💎 Purchase Crystals</h2>
+    <p>Buy in-game currency to use on summons and items.</p>
+    <ul>
+      <li>100 Crystals - $1.99</li>
+      <li>550 Crystals - $9.99</li>
+      <li>1200 Crystals - $19.99</li>
+    </ul>
+    <button data-tab="buy" onclick=playClickSound()>Purchase</button>
+  </div>
+
+  <div id="gacha" class="tab-content">
+    <h2>🎲 Gacha Pull</h2>
+    <button id="gacha-button" onclick=playClickSound()>Pull Random Character</button>
+    <p id="gacha-result"></p>
+  </div>
+
+  <div id="items" class="tab-content">
+    <h2>🎒 Item Shop</h2>
+    <div class="card-list">
+      <div class="shop-card">
+        <img src="images/item1.png" alt="Item 1" />
+        <h3>Sword of Sparks</h3>
+        <p>Price: 100G</p>
+        <button onclick=playClickSound()>Buy</button>
+      </div>
+
+      <div class="shop-card">
+        <img src="images/item2.png" alt="Item 2" />
+        <h3>Shield of Silence</h3>
+        <p>Price: 80G</p>
+        <button onclick=playClickSound()>Buy</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="currency-display" class="currency-count">
+    <h1>💰 0</h1>
+  </div>
+
+  <script src="shop.js"></script>
+</body>
+</html>
